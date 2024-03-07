@@ -32,8 +32,9 @@ file_not_found_exception::~file_not_found_exception()
 {
 }
 
-null_pointer_exception::null_pointer_exception()
+null_pointer_exception::null_pointer_exception(std::string & message) : io_exception(message)
 {
+    this->message = message;
 }
 
 null_pointer_exception::~null_pointer_exception()

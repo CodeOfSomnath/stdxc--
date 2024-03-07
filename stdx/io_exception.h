@@ -36,12 +36,12 @@ public:
 };
 
 
-class null_pointer_exception
+class null_pointer_exception : io_exception
 {
 private:
-    
+    std::string  message;
 public:
-    null_pointer_exception();
+    null_pointer_exception(std::string & message);
     ~null_pointer_exception();
 };
 
